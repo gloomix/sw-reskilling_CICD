@@ -1,0 +1,52 @@
+Task: URL-shortener (Project1 from Kai)
+Scope:
+- what the user experiences:
+  - accepts standard URL
+  - generates shortened unique URL and visits it
+  - allows for calling any previously given standard URL via shortened code
+  - tracks statistic of which URL has been visited how often and tells the user after specific requests
+  
+  - UI is only realized via a terminal interface with a small menu
+    - 3 options:
+      1) "standard": take standard URL, shorten it and visit it directly
+      2) "shortened": take shortened URL and, if existent, visit it. If not give, feedback to user and ask again for shortened URL or allow for switching to take new standard URL
+      3) "statistics": show statistics of visited URLs
+
+    - definition of visit: Menu is left, text is given with "Calling <shortened-URL>: Welcome at <long-URL>"
+      --> to get back: type "return"
+
+    - optional: allowing for users with passwords and individual statistics 
+      - if done, the following has to be done:
+        - menu gets a new first layer:
+          - allow setting up new user
+          - sign in existing user
+            - if not existing, ask for retry or switching to new-user-setup
+        - menu always allows for logout via "exit"
+        - after visiting an URL user is always logged out
+        - users and their credentials shall be stored locally in one separate file
+          - may be simple csv
+
+- what happens behind the scenes:
+  - URL shortening is done by any algorithm as chosen by developer that does the following:
+    - shortened URL is not longer than 12 characters
+    - is always of the shape x...x.yyy/z..z 
+    - z is optional
+    - x, y and z may only be english characters or numbers. No special characters are allowed.
+    - shortened URL must be unique
+    - shortened URL shall be easily memorizable by user
+    - optional: if possible group same base URLs together with same shortening of x and y
+
+  - called and shortened URLs are stored in a local file
+    - may be simple csv
+    - should be always checked first, whether URL was already existing before new shortened URL is generated
+  - statistics 
+    - minimum requirement: 
+      - shall be stored separately in an extra local file
+      - may be simple csv
+      - does not need user-specific tracking
+    - optional:
+      - allow for user-specific tracking
+      - instead of file-based solution, build a database
+      
+
+                     
