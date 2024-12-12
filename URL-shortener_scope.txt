@@ -11,11 +11,10 @@ Scope:
       1) "standard": take standard URL, shorten it and visit it directly
       2) "shortened": take shortened URL and, if existent, visit it. If not give, feedback to user and ask again for shortened URL or allow for switching to take new standard URL
       3) "statistics": show statistics of visited URLs
+      4) "exit": quits menu and also the whole programm
 
     - definition of visit: Menu is left, text is given with "Calling <shortened-URL>: Welcome at <long-URL>"
       --> to get back: type "return"
-
-    - always allow for exiting the whole menu/program by "exit"
 
     - optional: allowing for users with passwords and individual statistics 
       - if done, the following has to be done:
