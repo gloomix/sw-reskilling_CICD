@@ -37,15 +37,19 @@ Scope:
     - shortened URL shall be easily memorizable by user
     - optional: if possible group same base URLs together with same shortening of x and y
 
-  - called and shortened URLs are stored in a local file
-    - may be simple csv
+  - called and shortened URLs are stored
+    - MVP is a local table which only exists on runtime
     - should be always checked first, whether URL was already existing before new shortened URL is generated
+    - optional: store table in a local file
+      - may be simple csv
+
   - statistics 
     - minimum requirement: 
+      - shall be tracked in local table for each URL-pair stored
+    - optional:
       - shall be stored separately in an extra local file
       - may be simple csv
       - does not need user-specific tracking
-    - optional:
       - allow for user-specific tracking
       - instead of file-based solution, build a database
       
